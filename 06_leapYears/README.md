@@ -14,3 +14,13 @@ leapYears(1985) // is not a leap year: returns false
 
 ## Hints
 - use an `if` statement and `&&` to make sure all the conditions are met properly
+
+year is divisable by 400 = leap year yes
+year is divisable by 100= leap year no
+year is divisable by 4 = leap year yes 
+year is not divisable by 4 or 400= leap year no.
+
+
+year is divisable by 100 && is not divisable by 400 && is not divsable by 4= leap year no
+else = leap year yes
+year 
