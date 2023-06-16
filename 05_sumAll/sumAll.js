@@ -1,19 +1,13 @@
 const sumAll = function(startNum,finNum) {
-    if ((startNum||finNum)<0){
+    if (startNum < 0 || finNum < 0 || isNaN(startNum) || isNaN(finNum)) {
         return 'Error';
-    }
-    else if ((startNum||finNum)==undefined){
-        return 'Error';
-    }
-    else{
-        arr= Array.from(
-            {length: (finNum-startNum)+1},
-            (value,index) => startNum+ index
-        );
-        const sum= arr.reduce((partialsum,a)=> partialsum+a,0);
-        return sum;
-    }
-
+      }
+    
+      const min = Math.min(startNum, finNum);
+      const max = Math.max(startNum, finNum);
+    
+      const sum = ((max - min + 1) * (min + max)) / 2;
+      return sum;
 };
 //okay so on this one we need to sum each number from start number to final number. 
 //startNum, FinNum
