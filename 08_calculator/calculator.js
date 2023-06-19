@@ -15,22 +15,20 @@ const sum = function(...theArgs) {
 const multiply = function(...theArgs) {
   return theArgs.flat().reduce(function(a, b) { 
     return a * b;
-  }, 0);
+  }, 1);
 };
 
-const power = function(...theArgs) {
-  return theArgs.flat().reduce(function(a, b) { 
-    return a ** b;
-  }, 0);
-};
+const power = function(a,b) {
+     return Math.pow(a,b);
+  };
 
-const factorial = function() {
+const factorial = function(num) {
 	if (num < 0) 
         return -1;
   else if (num == 0) 
       return 1;
   else {
-      return (num * factorialize(num - 1));
+      return (num * factorial(num - 1));
   }
 };
 
